@@ -96,6 +96,7 @@ def get_list_of_saved_songs(sp, offset=0, total_songs=None):
 
 if __name__ == "__main__":
         sp = connect_with_spotipy_to_web_api()
-        list_songs = get_list_of_saved_songs(sp, offset=666, total_songs=1)
-        print(list_songs)
-        save_to_txt("\n".join(list_songs),"saved_songs.txt")
+        #list_songs = get_list_of_saved_songs(sp, offset=666, total_songs=1)
+        #print(list_songs)
+        #save_to_txt("\n".join(list_songs),"saved_songs.txt")
+        print(sp.current_user_saved_tracks())
